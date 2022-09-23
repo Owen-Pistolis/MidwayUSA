@@ -1,7 +1,7 @@
 var converter = require('number-to-words'); //A library to convert numbers to their word form
 function convertTimeToWords(hours, minutes){
     if(hours < 1 || hours > 12){    //Error check hours
-        console.log("You did not eneter a valid hour.  A valid hour is 1-12!");
+        console.log("You did not enter a valid hour.  A valid hour is 1-12!");
         return;
     }
     if(minutes < 0 || minutes > 59){    //Error check minutes
@@ -14,7 +14,7 @@ function convertTimeToWords(hours, minutes){
     }
     //Switch to handle what to print
     switch(minutes){
-        case 0: //Right on the hour
+        case 0:     //Right on the hour
             console.log(converter.toWords(tempHour) + " o' clock");
             break;
         case 15:    //Quarter past the hour
